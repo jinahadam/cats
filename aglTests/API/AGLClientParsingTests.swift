@@ -9,27 +9,6 @@
 import XCTest
 @testable import agl
 
-class AGLMockClient: AGLClient {
-
-    override func fetchList(completion: @escaping (Result<[Person]>) -> Void) {
-        let jsonDecoder = JSONDecoder()
-        let data = jsonData.data(using: .utf16)
-        do {
-            let peopleList = try jsonDecoder.decode([Person].self, from: data!)
-            DispatchQueue.main.async {
-                completion(Result.success(peopleList))
-            }
-        } catch let e {
-            print(e)
-            let bodyString = String(data: data!, encoding: .utf8)
-            DispatchQueue.main.async {
-                completion(Result.failure(APIError.invalidJSON(bodyString ?? "invalid JSON")))
-            }
-        }
-        
-    }
-}
-
 class AGLClientParsingTests: XCTestCase {
 
     var client: AGLMockClient!
@@ -52,5 +31,38 @@ class AGLClientParsingTests: XCTestCase {
         }
         waitForExpectations(timeout: 5.0, handler: nil)
     }
+
+    func testPetCount() {
+        let e = expectation(description: "listing response")
+        client.fetchList { (result) in
+            e.fulfill()
+            switch result {
+            case .success(let people):
+                let firstPerson = people.first!
+                XCTAssertEqual(firstPerson.pets.count, 2)
+            case .failure(let error):
+                XCTFail("Error \(error)")
+            }
+        }
+        waitForExpectations(timeout: 5.0, handler: nil)
+    }
+
+    func testPetDetails() {
+        let e = expectation(description: "listing response")
+        client.fetchList { (result) in
+            e.fulfill()
+            switch result {
+            case .success(let people):
+                let firstPerson = people.first!
+                let pet1 = firstPerson.pets.first!
+                XCTAssertEqual(pet1.name, "Garfield")
+                XCTAssertEqual(pet1.type, "Cat")
+            case .failure(let error):
+                XCTFail("Error \(error)")
+            }
+        }
+        waitForExpectations(timeout: 5.0, handler: nil)
+    }
+
 }
 
