@@ -20,6 +20,8 @@
 		80F3E1CB224B7ACF00E64FF8 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1CA224B7ACF00E64FF8 /* JsonData.swift */; };
 		80F3E1CF224B7DA100E64FF8 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1CD224B7D9A00E64FF8 /* Pet.swift */; };
 		80F3E1D1224B7DBE00E64FF8 /* AGLMockCleint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1D0224B7DBE00E64FF8 /* AGLMockCleint.swift */; };
+		80F3E1D4224B814400E64FF8 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1D3224B814400E64FF8 /* Cat.swift */; };
+		80F3E1D6224B819100E64FF8 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1D5224B819100E64FF8 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		80F3E1CA224B7ACF00E64FF8 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		80F3E1CD224B7D9A00E64FF8 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		80F3E1D0224B7DBE00E64FF8 /* AGLMockCleint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLMockCleint.swift; sourceTree = "<group>"; };
+		80F3E1D3224B814400E64FF8 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		80F3E1D5224B819100E64FF8 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				80F3E1CC224B7D8800E64FF8 /* ResponseModels */,
 				80E27948224B67DF00AF2452 /* API */,
 				80E27928224B674500AF2452 /* AppDelegate.swift */,
+				80F3E1D2224B810D00E64FF8 /* Model */,
+				80F3E1D7224B823100E64FF8 /* DataSources */,
 				80E2792A224B674500AF2452 /* ViewController.swift */,
 				80E2792C224B674500AF2452 /* Main.storyboard */,
 				80E2792F224B674800AF2452 /* Assets.xcassets */,
@@ -139,6 +145,22 @@
 				80E2794E224B699600AF2452 /* Person.swift */,
 			);
 			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		80F3E1D2224B810D00E64FF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80F3E1D3224B814400E64FF8 /* Cat.swift */,
+				80F3E1D5224B819100E64FF8 /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80F3E1D7224B823100E64FF8 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +266,8 @@
 			files = (
 				80E2792B224B674500AF2452 /* ViewController.swift in Sources */,
 				80E2794A224B67FE00AF2452 /* AGLClient.swift in Sources */,
+				80F3E1D6224B819100E64FF8 /* Owner.swift in Sources */,
+				80F3E1D4224B814400E64FF8 /* Cat.swift in Sources */,
 				80E2794F224B699600AF2452 /* Person.swift in Sources */,
 				80F3E1CF224B7DA100E64FF8 /* Pet.swift in Sources */,
 				80E27929224B674500AF2452 /* AppDelegate.swift in Sources */,
