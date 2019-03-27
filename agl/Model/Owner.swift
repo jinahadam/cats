@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum Gender {
-    case male
-    case female
+enum Gender: String {
+    case male = "Male"
+    case female = "Female"
 }
 
 struct Owner {

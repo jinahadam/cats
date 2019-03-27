@@ -9,6 +9,8 @@
 import Foundation
 
 struct Cat {
+    static let type = "Cat"
+    
     let name: String
     let owner: Owner
 }

@@ -10,7 +10,9 @@ import UIKit
 
 class CatTableViewDataSource: NSObject, UITableViewDataSource {
 
+    var data = CatData?
     var isLoading = false
+    var completionBlock: (() -> Void)?
 
     func loadData() {
         isLoading = true

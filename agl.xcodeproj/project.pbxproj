@@ -24,6 +24,8 @@
 		80F3E1D6224B819100E64FF8 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1D5224B819100E64FF8 /* Owner.swift */; };
 		80F3E1D9224B829000E64FF8 /* CatTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1D8224B829000E64FF8 /* CatTableViewDataSource.swift */; };
 		80F3E1DC224B836600E64FF8 /* CatTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1DB224B836600E64FF8 /* CatTableViewDataSourceTests.swift */; };
+		80F3E1DE224B852800E64FF8 /* CatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1DD224B852800E64FF8 /* CatData.swift */; };
+		80F3E1E1224B8B9500E64FF8 /* CatDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E1E0224B8B9500E64FF8 /* CatDataTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		80F3E1D5224B819100E64FF8 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		80F3E1D8224B829000E64FF8 /* CatTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewDataSource.swift; sourceTree = "<group>"; };
 		80F3E1DB224B836600E64FF8 /* CatTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		80F3E1DD224B852800E64FF8 /* CatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatData.swift; sourceTree = "<group>"; };
+		80F3E1E0224B8B9500E64FF8 /* CatDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDataTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 		80E2793C224B674800AF2452 /* aglTests */ = {
 			isa = PBXGroup;
 			children = (
+				80F3E1E4224B8D1200E64FF8 /* Fixtures */,
+				80F3E1DF224B8B7900E64FF8 /* ModelTests */,
 				80F3E1DA224B834B00E64FF8 /* DataSources */,
 				80F3E1C7224B7A0000E64FF8 /* API */,
 				80E2793D224B674800AF2452 /* aglTests.swift */,
@@ -138,7 +144,6 @@
 				80F3E1D0224B7DBE00E64FF8 /* AGLMockCleint.swift */,
 				80E2794B224B684600AF2452 /* AGLClientLiveTests.swift */,
 				80F3E1C8224B7A2600E64FF8 /* AGLClientParsingTests.swift */,
-				80F3E1CA224B7ACF00E64FF8 /* JsonData.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			children = (
 				80F3E1D3224B814400E64FF8 /* Cat.swift */,
 				80F3E1D5224B819100E64FF8 /* Owner.swift */,
+				80F3E1DD224B852800E64FF8 /* CatData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +181,22 @@
 				80F3E1DB224B836600E64FF8 /* CatTableViewDataSourceTests.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		80F3E1DF224B8B7900E64FF8 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				80F3E1E0224B8B9500E64FF8 /* CatDataTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		80F3E1E4224B8D1200E64FF8 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				80F3E1CA224B7ACF00E64FF8 /* JsonData.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +308,7 @@
 				80F3E1D9224B829000E64FF8 /* CatTableViewDataSource.swift in Sources */,
 				80F3E1CF224B7DA100E64FF8 /* Pet.swift in Sources */,
 				80E27929224B674500AF2452 /* AppDelegate.swift in Sources */,
+				80F3E1DE224B852800E64FF8 /* CatData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +319,7 @@
 				80F3E1C9224B7A2600E64FF8 /* AGLClientParsingTests.swift in Sources */,
 				80F3E1DC224B836600E64FF8 /* CatTableViewDataSourceTests.swift in Sources */,
 				80F3E1D1224B7DBE00E64FF8 /* AGLMockCleint.swift in Sources */,
+				80F3E1E1224B8B9500E64FF8 /* CatDataTests.swift in Sources */,
 				80F3E1CB224B7ACF00E64FF8 /* JsonData.swift in Sources */,
 				80E2793E224B674800AF2452 /* aglTests.swift in Sources */,
 				80E2794C224B684600AF2452 /* AGLClientLiveTests.swift in Sources */,
