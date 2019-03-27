@@ -103,11 +103,10 @@
 		80E27927224B674500AF2452 /* agl */ = {
 			isa = PBXGroup;
 			children = (
-				80F3E1CC224B7D8800E64FF8 /* ResponseModels */,
 				80E27948224B67DF00AF2452 /* API */,
-				80E27928224B674500AF2452 /* AppDelegate.swift */,
 				80F3E1D2224B810D00E64FF8 /* Model */,
 				80F3E1D7224B823100E64FF8 /* DataSources */,
+				80E27928224B674500AF2452 /* AppDelegate.swift */,
 				80E2792A224B674500AF2452 /* ViewController.swift */,
 				80E2792C224B674500AF2452 /* Main.storyboard */,
 				80E2792F224B674800AF2452 /* Assets.xcassets */,
@@ -133,6 +132,7 @@
 		80E27948224B67DF00AF2452 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				80F3E1CC224B7D8800E64FF8 /* ResponseModels */,
 				80E27949224B67FE00AF2452 /* AGLClient.swift */,
 			);
 			path = API;
