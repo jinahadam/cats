@@ -42,19 +42,15 @@ class CatTableViewDataSource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let data = data else { return 0 }
-        return section == 0 ?  data.catsWithMaleOwners.count : data.catsWithMaleOwners.count
+        return section == 0 ?  data.catsWithMaleOwners.count : data.catsWithFemaleOwners.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catCell", for: indexPath)
         guard let data = data else { return cell }
 
-        let cat = indexPath.section == 0 ? data.catsWithMaleOwners[indexPath.row] : data.catsWithMaleOwners[indexPath.row]
+        let cat = indexPath.section == 0 ? data.catsWithMaleOwners[indexPath.row] : data.catsWithFemaleOwners[indexPath.row]
         cell.textLabel?.text = cat.name
         return cell
     }
-
-    
-
-
 }

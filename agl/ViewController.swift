@@ -15,6 +15,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = tableViewDataSource
+        title = "AGL Cats"
         tableViewDataSource.completion = {
             self.tableView.reloadData()
         }
