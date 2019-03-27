@@ -12,11 +12,11 @@ struct CatData {
     var cats: [Cat]
 
     var catsWithFemaleOwners: [Cat] {
-        return cats.filter { $0.owner.gender == .female }
+        return cats.filter { $0.owner.gender == .female }.sorted()
     }
 
     var catsWithMaleOwners: [Cat] {
-        return cats.filter { $0.owner.gender == .male }
+        return cats.filter { $0.owner.gender == .male }.sorted()
     }
 
     init(responseModel: [Person]) {
