@@ -13,7 +13,7 @@ class AGLMockClient: AGLClient {
 
     override func fetchList(completion: @escaping (Result<[Person]>) -> Void) {
         let jsonDecoder = JSONDecoder()
-        let data = jsonData.data(using: .utf16)
+        let data = jsonData.data(using: .utf8)
         do {
             let peopleList = try jsonDecoder.decode([Person].self, from: data!)
             DispatchQueue.main.async {

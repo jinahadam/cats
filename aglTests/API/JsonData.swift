@@ -28,5 +28,10 @@ let jsonData = """
 "name": "Garfield",
 "type": "Cat"
 }]
+}, {
+"name": "Steve",
+"gender": "Male",
+"age": 45,
+"pets": null
 }]
 """

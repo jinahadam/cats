@@ -13,6 +13,6 @@ struct Person: Codable {
     let name: String
     let age: Int
     let gender: String
-    let pets: [Pet]
+    let pets: [Pet]?
 }
 
