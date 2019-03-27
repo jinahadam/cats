@@ -20,8 +20,6 @@ enum APIError: Error {
     case invalidJSON(String)
 }
 
-
-
 class AGLClient {
     let session: URLSession
 
@@ -56,8 +54,9 @@ class AGLClient {
                     }
 
                 default:
-                    print("failure")
-                    //ApiResult.failure(.serverError) -=> completion
+                    DispatchQueue.main.async {
+                        completion(Result.failure(APIError.serverError))
+                    }
                 }
             }
         }

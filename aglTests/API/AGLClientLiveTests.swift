@@ -9,9 +9,7 @@
 import XCTest
 @testable import agl
 
-
-
-class AGLClientTests: XCTestCase {
+class AGLClientLiveTests: XCTestCase {
 
     var client: AGLClient!
 
