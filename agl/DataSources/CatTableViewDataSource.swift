@@ -46,8 +46,15 @@ class CatTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "catCell", for: indexPath)
+        guard let data = data else { return cell }
+
+        let cat = indexPath.section == 0 ? data.catsWithMaleOwners[indexPath.row] : data.catsWithMaleOwners[indexPath.row]
+        cell.textLabel?.text = cat.name
+        return cell
     }
+
+    
 
 
 }
