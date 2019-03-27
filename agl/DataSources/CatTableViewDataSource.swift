@@ -12,7 +12,7 @@ class CatTableViewDataSource: NSObject, UITableViewDataSource {
 
     private let client = AGLClient(session: URLSession.shared)
     private var data: CatData?
-    var completionBlock: (() -> Void)?
+    var completion: (() -> Void)?
 
     private var sectionCount: Int {
         return 2
@@ -24,10 +24,10 @@ class CatTableViewDataSource: NSObject, UITableViewDataSource {
             switch result {
             case .success(let people):
                 self.data = CatData(responseModel: people)
-                self.completionBlock?()
+                self.completion?()
             case .failure(let error):
                 print(error)//show error
-                self.completionBlock?()
+                self.completion?()
             }
         }
     }
@@ -46,7 +46,7 @@ class CatTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
     }
 
 

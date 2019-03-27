@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+
+    let tableViewDataSource = CatTableViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.dataSource = tableViewDataSource
+        tableViewDataSource.completion = {
+            self.tableView.reloadData()
+        }
+        tableViewDataSource.loadData()
     }
 
 
