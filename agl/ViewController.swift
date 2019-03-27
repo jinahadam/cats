@@ -16,7 +16,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         tableView.dataSource = tableViewDataSource
         title = "AGL Cats"
-        tableViewDataSource.completion = {
+        tableViewDataSource.completion = { [weak self] in
+            guard let self = self else { return }
             self.tableView.reloadData()
         }
         tableViewDataSource.loadData()
